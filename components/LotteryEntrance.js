@@ -69,7 +69,6 @@ export default function LotteryEntrance() {
 
     const handleSuccess = async function (tx) {
         await tx.wait(1)
-
         updateUI()
         handleNewNotification(tx)
     }
@@ -84,7 +83,10 @@ export default function LotteryEntrance() {
     }
     return (
         <div className="p-5">
+
             Hi From Lottery Entrance
+
+
             {raffleAddress ? (
                 <div>
                     <button
@@ -106,6 +108,7 @@ export default function LotteryEntrance() {
                     <div>Entrance Fee: {ethers.utils.formatUnits(entranceFee, "ether")} ETH Number of</div>
                     <div>Player {numPlayer}</div>
                     <div>Recent Winner {recentWinner}</div>
+                    <div>WHAT UPP</div>
                 </div>
             ) : (
                 <div>No raffle address</div>
